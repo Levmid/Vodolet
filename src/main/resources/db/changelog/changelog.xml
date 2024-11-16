@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="Admin">
+        <createTable tableName="staff">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="post" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birthday" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="boat_id" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addAutoIncrement tableName="staff" columnName="id" columnDataType="int"/>
+    </changeSet>
+
+    <changeSet id="2" author="Admin">
+        <insert tableName="staff">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Фролов"/>
+            <column name="age" valueNumeric="30"/>
+            <column name="post" value="Капитан"/>
+            <column name="birthday" valueDate="1993-05-15"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Артем"/>
+            <column name="surname" value="Медянников"/>
+            <column name="age" valueNumeric="28"/>
+            <column name="post" value="Капитан"/>
+            <column name="birthday" valueDate="1995-08-20"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Фарафонтов"/>
+            <column name="age" valueNumeric="35"/>
+            <column name="post" value="Капитан"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Василий"/>
+            <column name="surname" value="Кузин"/>
+            <column name="age" valueNumeric="21"/>
+            <column name="post" value="Капитан"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Валентин"/>
+            <column name="surname" value="Гусев"/>
+            <column name="age" valueNumeric="41"/>
+            <column name="post" value="Матрос"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Артем"/>
+            <column name="surname" value="Яшуков"/>
+            <column name="age" valueNumeric="25"/>
+            <column name="post" value="Матрос"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Олег"/>
+            <column name="surname" value="Ибрагимов"/>
+            <column name="age" valueNumeric="38"/>
+            <column name="post" value="Матрос"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Валерий"/>
+            <column name="surname" value="Пчелкин"/>
+            <column name="age" valueNumeric="23"/>
+            <column name="post" value="Матрос"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Никита"/>
+            <column name="surname" value="Сухарев"/>
+            <column name="age" valueNumeric="44"/>
+            <column name="post" value="Механик"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Алексей"/>
+            <column name="surname" value="Шевяков"/>
+            <column name="age" valueNumeric="43"/>
+            <column name="post" value="Механик"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Матвей"/>
+            <column name="surname" value="Людкевич"/>
+            <column name="age" valueNumeric="32"/>
+            <column name="post" value="Механик"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+        <insert tableName="staff">
+            <column name="name" value="Юрий"/>
+            <column name="surname" value="Запивалов"/>
+            <column name="age" valueNumeric="33"/>
+            <column name="post" value="Механик"/>
+            <column name="birthday" valueDate="1988-03-10"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3" author="Admin">
+        <createTable tableName="passengers">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="boat_id" type="INT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addAutoIncrement tableName="passengers" columnName="id" columnDataType="int"/>
+    </changeSet>
+
+    <changeSet id="4" author="Admin">
+        <insert tableName="passengers">
+            <column name="name" value="Андрей"/>
+            <column name="surname" value="Кузин"/>
+            <column name="age" valueNumeric="30"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Анна"/>
+            <column name="surname" value="Сорокина"/>
+            <column name="age" valueNumeric="25"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Сергей"/>
+            <column name="surname" value="Кляузин"/>
+            <column name="age" valueNumeric="40"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Святослав"/>
+            <column name="surname" value="Власов"/>
+            <column name="age" valueNumeric="22"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дмитрий"/>
+            <column name="surname" value="Иванов"/>
+            <column name="age" valueNumeric="18"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ярослав"/>
+            <column name="surname" value="Емельянов"/>
+            <column name="age" valueNumeric="19"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Виктор"/>
+            <column name="surname" value="Селезнев"/>
+            <column name="age" valueNumeric="25"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Марк"/>
+            <column name="surname" value="Спиридонов"/>
+            <column name="age" valueNumeric="27"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Владимир"/>
+            <column name="surname" value="Яковлев"/>
+            <column name="age" valueNumeric="33"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Кристина"/>
+            <column name="surname" value="Савина"/>
+            <column name="age" valueNumeric="44"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дмитрий"/>
+            <column name="surname" value="Орехов"/>
+            <column name="age" valueNumeric="38"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Андрей"/>
+            <column name="surname" value="Котов"/>
+            <column name="age" valueNumeric="45"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Семён"/>
+            <column name="surname" value="Волков"/>
+            <column name="age" valueNumeric="31"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ника"/>
+            <column name="surname" value="Родионова"/>
+            <column name="age" valueNumeric="32"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Савелий"/>
+            <column name="surname" value="Петров"/>
+            <column name="age" valueNumeric="34"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Лев"/>
+            <column name="surname" value="Горбунов"/>
+            <column name="age" valueNumeric="45"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Виктор"/>
+            <column name="surname" value="Поздняков"/>
+            <column name="age" valueNumeric="55"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Денис"/>
+            <column name="surname" value="Зеленин"/>
+            <column name="age" valueNumeric="54"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Алёна"/>
+            <column name="surname" value="Серебрякова"/>
+            <column name="age" valueNumeric="43"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Елизавета"/>
+            <column name="surname" value="Казакова"/>
+            <column name="age" valueNumeric="56"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ирина"/>
+            <column name="surname" value="Казакова"/>
+            <column name="age" valueNumeric="64"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Александр"/>
+            <column name="surname" value="Воробьев"/>
+            <column name="age" valueNumeric="31"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Маргарита"/>
+            <column name="surname" value="Комарова"/>
+            <column name="age" valueNumeric="30"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Маргарита"/>
+            <column name="surname" value="Комарова"/>
+            <column name="age" valueNumeric="30"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Медведев"/>
+            <column name="age" valueNumeric="40"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Александр"/>
+            <column name="surname" value="Иванов"/>
+            <column name="age" valueNumeric="30"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Мария"/>
+            <column name="surname" value="Петрова"/>
+            <column name="age" valueNumeric="25"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дмитрий"/>
+            <column name="surname" value="Сидоров"/>
+            <column name="age" valueNumeric="35"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Елена"/>
+            <column name="surname" value="Кузнецова"/>
+            <column name="age" valueNumeric="28"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Николай"/>
+            <column name="surname" value="Семёнов"/>
+            <column name="age" valueNumeric="45"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ольга"/>
+            <column name="surname" value="Федорова"/>
+            <column name="age" valueNumeric="32"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Игорь"/>
+            <column name="surname" value="Морозов"/>
+            <column name="age" valueNumeric="50"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Анна"/>
+            <column name="surname" value="Павлова"/>
+            <column name="age" valueNumeric="29"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Сергей"/>
+            <column name="surname" value="Лебедев"/>
+            <column name="age" valueNumeric="37"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Татьяна"/>
+            <column name="surname" value="Никитина"/>
+            <column name="age" valueNumeric="41"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Владимир"/>
+            <column name="surname" value="Громов"/>
+            <column name="age" valueNumeric="48"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Кристина"/>
+            <column name="surname" value="Давыдова"/>
+            <column name="age" valueNumeric="26"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Артем"/>
+            <column name="surname" value="Соловьев"/>
+            <column name="age" valueNumeric="39"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Юлия"/>
+            <column name="surname" value="Зайцева"/>
+            <column name="age" valueNumeric="24"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Максим"/>
+            <column name="surname" value="Ковалев"/>
+            <column name="age" valueNumeric="33"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дарья"/>
+            <column name="surname" value="Маркова"/>
+            <column name="age" valueNumeric="27"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Егор"/>
+            <column name="surname" value="Савельев"/>
+            <column name="age" valueNumeric="36"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Светлана"/>
+            <column name="surname" value="Климова"/>
+            <column name="age" valueNumeric="42"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Анастасия"/>
+            <column name="surname" value="Борисова"/>
+            <column name="age" valueNumeric="31"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="5" author="Admin">
+        <createTable tableName="boat">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="boat_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="capcity" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="road_map" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="date_of_voyage" type="date">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addAutoIncrement tableName="boat" columnName="id" columnDataType="int"/>
+    </changeSet>
+    <changeSet id="6" author="Admin">
+        <insert tableName="boat">
+            <column name="boat_name" value="Валдай 45Р"/>
+            <column name="capcity" valueNumeric="45"/>
+            <column name="road_map" value="Нижний Новгород - Дзержинск"/>
+        </insert>
+        <insert tableName="boat">
+            <column name="boat_name" value="Валдай 45Р"/>
+            <column name="capcity" valueNumeric="45"/>
+            <column name="road_map" value="Нижний Новгород - Городец"/>
+            <column name="date_of_voyage" value = "2024-10-11"/>
+        </insert>
+        <insert tableName="boat">
+            <column name="boat_name" value="Метеор 120Р"/>
+            <column name="capcity" valueNumeric="120"/>
+            <column name="road_map" value="Нижний Новгород - Дзержинск"/>
+        </insert>
+        <insert tableName="boat">
+            <column name="boat_name" value="Метеор 120Р"/>
+            <column name="capcity" valueNumeric="120"/>
+            <column name="road_map" value="Нижний Новгород - Городец"/>
+            <column name="date_of_voyage" value = "2024-10-15"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
