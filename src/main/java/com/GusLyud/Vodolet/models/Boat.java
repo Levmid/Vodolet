@@ -1,4 +1,4 @@
-package com.GusLyud.Vodolet.Models;
+package com.GusLyud.Vodolet.models;
 
 import jakarta.persistence.*;
 
@@ -29,12 +29,12 @@ public class Boat {
     private List<Staff> listOfStaff;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "boat", cascade = CascadeType.ALL)
-    private List<Pasengers> listOfPassengers;
+    private List<Passengers> listOfPassengers;
 
     public Boat() {
     }
 
-    public Boat(Long id, String boatName, int capcity, String roadMap, LocalDate dateOfVoyage, List<Staff> listOfStaff, List<Pasengers> listOfPassengers) {
+    public Boat(Long id, String boatName, int capcity, String roadMap, LocalDate dateOfVoyage, List<Staff> listOfStaff, List<Passengers> listOfPassengers) {
         this.id = id;
         this.boatName = boatName;
         this.capcity = capcity;
@@ -92,11 +92,11 @@ public class Boat {
         this.listOfStaff = listOfStaff;
     }
 
-    public List<Pasengers> getListOfPassengers() {
+    public List<Passengers> getListOfPassengers() {
         return listOfPassengers;
     }
 
-    public void setListOfPassengers(List<Pasengers> listOfPassengers) {
+    public void setListOfPassengers(List<Passengers> listOfPassengers) {
         this.listOfPassengers = listOfPassengers;
     }
 

@@ -1,4 +1,4 @@
-package com.GusLyud.Vodolet.Models;
+package com.GusLyud.Vodolet.models;
 
 import jakarta.persistence.*;
 
@@ -10,7 +10,6 @@ public class Staff {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     @Column(name = "name")
     private String name;
@@ -29,7 +28,6 @@ public class Staff {
 
     @ManyToOne
     @JoinColumn(name = "boat_id")
-
     private Boat boat;
 
     public Staff() {

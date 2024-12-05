@@ -1,10 +1,10 @@
-package com.GusLyud.Vodolet.Models;
+package com.GusLyud.Vodolet.models;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "passeners")
-public class Pasengers {
+public class Passengers {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class Pasengers {
     @JoinColumn(name = "boat_id")
     private Boat boat;
 
-    public Pasengers() {
+    public Passengers() {
     }
 
-    public Pasengers(Long id, String name, String surname, int age) {
+    public Passengers(Long id, String name, String surname, int age) {
         this.id = id;
         this.name = name;
         this.surname = surname;
