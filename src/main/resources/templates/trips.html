@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trips Information</title>
+</head>
+<body>
+<h1>All Trips</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Road Map</th>
+        <th>Cost</th>
+        <th>Date of Voyage</th>
+        <th>Quantity</th>
+        <th>Boat Name</th>
+        <th>Passengers</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="trip : ${trips}">
+        <td th:text="${trip.id}"></td>
+        <td th:text="${trip.roadMap}"></td>
+        <td th:text="${trip.cost}"></td>
+        <td th:text="${trip.dateOfVoyage}"></td>
+        <td th:text="${trip.quantity}"></td>
+        <td th:text="${trip.boat.boatName}"></td>
+        <td>
+            <ul>
+                <li th:each="passenger : ${trip.listOfPassengers}"
+                    th:text="${passenger.name + ' ' + passenger.surname}"></li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

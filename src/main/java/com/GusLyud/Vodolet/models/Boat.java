@@ -19,29 +19,17 @@ public class Boat {
     @Column(name = "capcity")
     private int capcity;
 
-    @Column(name = "road_map")
-    private String roadMap;
-
-    @Column(name = "date_of_voyage")
-    private LocalDate dateOfVoyage;
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "boat", cascade = CascadeType.ALL)
     private List<Staff> listOfStaff;
-
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "boat", cascade = CascadeType.ALL)
-    private List<Passengers> listOfPassengers;
 
     public Boat() {
     }
 
-    public Boat(Long id, String boatName, int capcity, String roadMap, LocalDate dateOfVoyage, List<Staff> listOfStaff, List<Passengers> listOfPassengers) {
+    public Boat(Long id, String boatName, int capcity, List<Staff> listOfStaff) {
         this.id = id;
         this.boatName = boatName;
         this.capcity = capcity;
-        this.roadMap = roadMap;
-        this.dateOfVoyage = dateOfVoyage;
         this.listOfStaff = listOfStaff;
-        this.listOfPassengers = listOfPassengers;
     }
 
     public Long getId() {
@@ -68,22 +56,6 @@ public class Boat {
         this.capcity = capcity;
     }
 
-    public String getRoadMap() {
-        return roadMap;
-    }
-
-    public void setRoadMap(String roadMap) {
-        this.roadMap = roadMap;
-    }
-
-    public LocalDate getDateOfVoyage() {
-        return dateOfVoyage;
-    }
-
-    public void setDateOfVoyage(LocalDate dateOfVoyage) {
-        this.dateOfVoyage = dateOfVoyage;
-    }
-
     public List<Staff> getListOfStaff() {
         return listOfStaff;
     }
@@ -92,24 +64,13 @@ public class Boat {
         this.listOfStaff = listOfStaff;
     }
 
-    public List<Passengers> getListOfPassengers() {
-        return listOfPassengers;
-    }
-
-    public void setListOfPassengers(List<Passengers> listOfPassengers) {
-        this.listOfPassengers = listOfPassengers;
-    }
-
     @Override
     public String toString() {
         return "Boat{" +
                 "id=" + id +
                 ", boatName='" + boatName + '\'' +
                 ", capcity=" + capcity +
-                ", roadMap='" + roadMap + '\'' +
-                ", dateOfVoyage=" + dateOfVoyage +
                 ", listOfStaff=" + listOfStaff +
-                ", listOfPassengers=" + listOfPassengers +
                 '}';
     }
 }

@@ -3,7 +3,7 @@ package com.GusLyud.Vodolet.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "passeners")
+@Table(name = "passengers")
 public class Passengers {
 
     @Id
@@ -20,25 +20,25 @@ public class Passengers {
     private int age;
 
     @ManyToOne
-    @JoinColumn(name = "boat_id")
-    private Boat boat;
+    @JoinColumn(name = "trip_id")
+    private Trip trip;
 
     public Passengers() {
     }
 
-    public Passengers(Long id, String name, String surname, int age) {
-        this.id = id;
+    public Passengers(String name, String surname, int age, Trip trip) {
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.trip = trip;
     }
 
-    public Boat getBoat() {
-        return boat;
+    public Trip getTrip() {
+        return trip;
     }
 
-    public void setBoat(Boat boat) {
-        this.boat = boat;
+    public void setTrip(Trip trip) {
+        this.trip = trip;
     }
 
     public Long getId() {
