@@ -39,6 +39,7 @@
             <column name="age" valueNumeric="30"/>
             <column name="post" value="Капитан"/>
             <column name="birthday" valueDate="1993-05-15"/>
+            <column name="boat_id" valueNumeric="1"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Артем"/>
@@ -46,6 +47,7 @@
             <column name="age" valueNumeric="28"/>
             <column name="post" value="Капитан"/>
             <column name="birthday" valueDate="1995-08-20"/>
+            <column name="boat_id" valueNumeric="2"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Иван"/>
@@ -53,6 +55,7 @@
             <column name="age" valueNumeric="35"/>
             <column name="post" value="Капитан"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="3"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Василий"/>
@@ -60,6 +63,7 @@
             <column name="age" valueNumeric="21"/>
             <column name="post" value="Капитан"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="4"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Валентин"/>
@@ -67,6 +71,7 @@
             <column name="age" valueNumeric="41"/>
             <column name="post" value="Матрос"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="1"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Артем"/>
@@ -74,6 +79,7 @@
             <column name="age" valueNumeric="25"/>
             <column name="post" value="Матрос"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="2"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Олег"/>
@@ -81,6 +87,7 @@
             <column name="age" valueNumeric="38"/>
             <column name="post" value="Матрос"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="3"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Валерий"/>
@@ -88,6 +95,7 @@
             <column name="age" valueNumeric="23"/>
             <column name="post" value="Матрос"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="4"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Никита"/>
@@ -95,6 +103,7 @@
             <column name="age" valueNumeric="44"/>
             <column name="post" value="Механик"/>
             <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="3"/>
         </insert>
         <insert tableName="staff">
             <column name="name" value="Алексей"/>
@@ -102,20 +111,7 @@
             <column name="age" valueNumeric="43"/>
             <column name="post" value="Механик"/>
             <column name="birthday" valueDate="1988-03-10"/>
-        </insert>
-        <insert tableName="staff">
-            <column name="name" value="Матвей"/>
-            <column name="surname" value="Людкевич"/>
-            <column name="age" valueNumeric="32"/>
-            <column name="post" value="Механик"/>
-            <column name="birthday" valueDate="1988-03-10"/>
-        </insert>
-        <insert tableName="staff">
-            <column name="name" value="Юрий"/>
-            <column name="surname" value="Запивалов"/>
-            <column name="age" valueNumeric="33"/>
-            <column name="post" value="Механик"/>
-            <column name="birthday" valueDate="1988-03-10"/>
+            <column name="boat_id" valueNumeric="4"/>
         </insert>
     </changeSet>
 
