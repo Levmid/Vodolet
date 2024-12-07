@@ -1,6 +1,7 @@
 package com.GusLyud.Vodolet.services;
 
 import com.GusLyud.Vodolet.models.Boat;
+import com.GusLyud.Vodolet.models.Staff;
 import com.GusLyud.Vodolet.repo.BoatRepository;
 import com.GusLyud.Vodolet.repo.PassengersRepository;
 import com.GusLyud.Vodolet.repo.StaffRepository;
@@ -25,5 +26,8 @@ public class BoatService {
 
     public List<Boat> getBoatInfo() {
         return boatRepository.findAll();
+    }
+    public Boat findById(Long id) {
+        return boatRepository.findById(id).orElse(null);
     }
 }

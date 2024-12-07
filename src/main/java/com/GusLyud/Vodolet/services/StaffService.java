@@ -17,4 +17,8 @@ public class StaffService {
     public Staff findById(Long id) {
         return staffRepository.findById(id).orElse(null);
     }
+    public void save(Staff staff){
+        staffRepository.save(staff);
+    }
+
 }

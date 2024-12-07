@@ -33,13 +33,13 @@ public class Staff {
     public Staff() {
     }
 
-    public Staff(int age, Long id, String name, String surname, String post, LocalDate birthday) {
-        this.age = age;
-        this.id = id;
+    public Staff(String name, String surname, int age, String post, LocalDate birthday, Boat boat) {
         this.name = name;
         this.surname = surname;
+        this.age = age;
         this.post = post;
         this.birthday = birthday;
+        this.boat = boat;
     }
 
     public Boat getBoat() {

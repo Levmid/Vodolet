@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Search Staff</title>
+    <title>Поиск и создание сотрудника</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,15 +28,16 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            width: 400px;
         }
 
-        form input[type="number"] {
+        form input, form select {
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin-right: 10px;
-            width: 200px;
+            margin-bottom: 10px;
+            width: 100%;
         }
 
         form button {
@@ -47,6 +48,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            width: 100%;
         }
 
         form button:hover {
@@ -72,11 +74,39 @@
             font-size: 12px;
             color: #aaa;
         }
+
+        .back-button {
+            display: inline-block;
+            background-color: #0078D7;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:hover {
+            background-color: #005bb5;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Центрирует кнопку по горизонтали */
+            align-items: center; /* Центрирует кнопку по вертикали */
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-<h1>Поиск сотрудника</h1>
+<h1>Поиск и создание сотрудника</h1>
 
+<!-- Форма поиска сотрудника -->
 <div class="form-container">
     <form th:action="@{/api/staff/find}" method="get">
         <input type="number" name="id" placeholder="Введите ID сотрудника" required>
@@ -84,14 +114,41 @@
     </form>
 </div>
 
+<!-- Информация о найденном сотруднике -->
 <div class="staff-info" th:if="${staff != null}">
     <h2>Информация о сотруднике</h2>
     <p><strong>ID:</strong> <span th:text="${staff.id}"></span></p>
     <p><strong>Имя:</strong> <span th:text="${staff.name}"></span></p>
     <p><strong>Фамилия:</strong> <span th:text="${staff.surname}"></span></p>
+    <p><strong>Возраст:</strong> <span th:text="${staff.age}"></span></p>
     <p><strong>Роль:</strong> <span th:text="${staff.post}"></span></p>
     <p><strong>Дата рождения:</strong> <span th:text="${staff.birthday}"></span></p>
     <p><strong>Закреплен за судном:</strong> <span th:text="${staff.boat.boatName}"></span></p>
+</div>
+
+<!-- Форма создания нового сотрудника -->
+<h2 style="text-align: center;">Создание нового сотрудника</h2>
+<div class="form-container">
+    <form th:action="@{/api/staff/create}" method="post">
+        <input type="text" name="name" placeholder="Имя" required>
+        <input type="text" name="surname" placeholder="Фамилия" required>
+        <input type="number" name="age" placeholder="Возраст" required>
+        <input type="text" name="post" placeholder="Должность" required>
+        <input type="date" name="birthday" placeholder="Дата рождения" required>
+        <label for="boat">Закреплен за судном:</label>
+        <select name="boat" id="boat" required>
+            <option value="">Выберите судно</option>
+            <!-- Пример динамической генерации списка судов -->
+            <option th:each="boat : ${boats}" th:value="${boat.id}" th:text="${boat.boatName}"></option>
+        </select>
+
+        <button type="submit">Создать сотрудника</button>
+    </form>
+</div>
+
+<!-- Кнопка для возврата в меню -->
+<div class="button-container">
+    <a href="/" class="back-button">Назад в меню</a>
 </div>
 
 <footer>

@@ -8,6 +8,7 @@ import com.GusLyud.Vodolet.repo.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -29,5 +30,15 @@ public class TripService {
     }
     public List<TripHistory> getAllHistoryTrips(){
         return tripHistory.findAll();
+    }
+    public List<Trip> getTripsByDateRange(String startDate, String endDate) {
+        LocalDate start = LocalDate.parse(startDate);
+        LocalDate end = LocalDate.parse(endDate);
+        return tripRepository.findTripsByDateRange(start, end); // Репозиторий, который фильтрует рейсы по диапазону дат
+    }
+    public List<TripHistory> getTripsHistoryByDateRange(String startDate, String endDate) {
+        LocalDate start = LocalDate.parse(startDate);
+        LocalDate end = LocalDate.parse(endDate);
+        return tripHistory.findTripsByDateRange(start, end); // Репозиторий, который фильтрует рейсы по диапазону дат
     }
 }
