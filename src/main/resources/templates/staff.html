@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Staff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 20px 10px;
+            color: #444;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        form button {
+            background-color: #0078D7;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #005bb5;
+        }
+
+        .staff-info {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .staff-info h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+<h1>Поиск сотрудника</h1>
+
+<div class="form-container">
+    <form th:action="@{/api/staff/find}" method="get">
+        <input type="number" name="id" placeholder="Введите ID сотрудника" required>
+        <button type="submit">Найти</button>
+    </form>
+</div>
+
+<div class="staff-info" th:if="${staff != null}">
+    <h2>Информация о сотруднике</h2>
+    <p><strong>ID:</strong> <span th:text="${staff.id}"></span></p>
+    <p><strong>Имя:</strong> <span th:text="${staff.name}"></span></p>
+    <p><strong>Фамилия:</strong> <span th:text="${staff.surname}"></span></p>
+    <p><strong>Роль:</strong> <span th:text="${staff.post}"></span></p>
+    <p><strong>Дата рождения:</strong> <span th:text="${staff.birthday}"></span></p>
+    <p><strong>Закреплен за судном:</strong> <span th:text="${staff.boat.boatName}"></span></p>
+</div>
+
+<footer>
+    &copy; 2024 Водолёт. Все права защищены.
+</footer>
+</body>
+</html>

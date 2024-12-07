@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Boats Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #444;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        table thead {
+            background-color: #0078D7;
+            color: white;
+        }
+
+        table thead th {
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table td {
+            padding: 10px;
+            font-size: 14px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        table ul li {
+            padding: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+<h1>Информация по судам</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Название судна</th>
+        <th>Вместимость</th>
+        <th>Рабочий персонал</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="boats : ${boats}">
+        <td th:text="${boats.id}"></td>
+        <td th:text="${boats.boatName}"></td>
+        <td th:text="${boats.capcity}"></td>
+        <td>
+            <ul>
+                <li th:each="staff : ${boats.listOfStaff}"
+                    th:text="${'ID ' + staff.id + ' ' + staff.name + ' ' + staff.surname}"></li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<footer>
+    &copy; 2024 Водолёт. Все права защищены.
+</footer>
+</body>
+</html>
