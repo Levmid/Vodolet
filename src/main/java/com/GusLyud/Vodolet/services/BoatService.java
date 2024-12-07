@@ -1,10 +1,13 @@
 package com.GusLyud.Vodolet.services;
 
+import com.GusLyud.Vodolet.models.Boat;
 import com.GusLyud.Vodolet.repo.BoatRepository;
 import com.GusLyud.Vodolet.repo.PassengersRepository;
 import com.GusLyud.Vodolet.repo.StaffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class BoatService {
@@ -18,5 +21,9 @@ public class BoatService {
         this.boatRepository = boatRepository;
         this.staffRepository = staffRepository;
         this.passengersRepository = passengersRepository;
+    }
+
+    public List<Boat> getBoatInfo() {
+        return boatRepository.findAll();
     }
 }

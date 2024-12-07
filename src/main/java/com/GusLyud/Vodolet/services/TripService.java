@@ -1,6 +1,7 @@
 package com.GusLyud.Vodolet.services;
 
 import com.GusLyud.Vodolet.models.Trip;
+import com.GusLyud.Vodolet.models.TripHistory;
 import com.GusLyud.Vodolet.repo.BoatRepository;
 import com.GusLyud.Vodolet.repo.TripHistoryRepository;
 import com.GusLyud.Vodolet.repo.TripRepository;
@@ -25,5 +26,8 @@ public class TripService {
 
     public List<Trip> getAllTrips(){
         return tripRepository.findAll();
+    }
+    public List<TripHistory> getAllHistoryTrips(){
+        return tripHistory.findAll();
     }
 }

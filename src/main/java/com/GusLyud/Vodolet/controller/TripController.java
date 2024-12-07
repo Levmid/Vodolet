@@ -24,5 +24,11 @@ public class TripController {
         model.addAttribute("trips",tripService.getAllTrips());
         return "trips";
     }
+    @GetMapping("/get-history-info")
+    public String getTripHistoryInfo(Model model){
+        System.out.println("Method getTripInfo called");
+        model.addAttribute("tripshistory",tripService.getAllHistoryTrips());
+        return "tripshistory";
+    }
 
 }
