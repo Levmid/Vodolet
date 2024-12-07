@@ -145,223 +145,494 @@
             <column name="name" value="Андрей"/>
             <column name="surname" value="Кузин"/>
             <column name="age" valueNumeric="30"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Анна"/>
             <column name="surname" value="Сорокина"/>
             <column name="age" valueNumeric="25"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Сергей"/>
             <column name="surname" value="Кляузин"/>
             <column name="age" valueNumeric="40"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Святослав"/>
             <column name="surname" value="Власов"/>
             <column name="age" valueNumeric="22"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Дмитрий"/>
             <column name="surname" value="Иванов"/>
             <column name="age" valueNumeric="18"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Ярослав"/>
             <column name="surname" value="Емельянов"/>
             <column name="age" valueNumeric="19"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Виктор"/>
             <column name="surname" value="Селезнев"/>
             <column name="age" valueNumeric="25"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Марк"/>
             <column name="surname" value="Спиридонов"/>
             <column name="age" valueNumeric="27"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Владимир"/>
             <column name="surname" value="Яковлев"/>
             <column name="age" valueNumeric="33"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Кристина"/>
             <column name="surname" value="Савина"/>
             <column name="age" valueNumeric="44"/>
+            <column name="trip_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Петров"/>
+            <column name="age" valueNumeric="30"/>
+            <column name="trip_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Анна"/>
+            <column name="surname" value="Иванова"/>
+            <column name="age" valueNumeric="25"/>
+            <column name="trip_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Мария"/>
+            <column name="surname" value="Сидорова"/>
+            <column name="age" valueNumeric="22"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Дмитрий"/>
-            <column name="surname" value="Орехов"/>
-            <column name="age" valueNumeric="38"/>
-        </insert>
-        <insert tableName="passengers">
-            <column name="name" value="Андрей"/>
-            <column name="surname" value="Котов"/>
+            <column name="surname" value="Михайлов"/>
             <column name="age" valueNumeric="45"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
-            <column name="name" value="Семён"/>
-            <column name="surname" value="Волков"/>
-            <column name="age" valueNumeric="31"/>
+            <column name="name" value="Ольга"/>
+            <column name="surname" value="Николаева"/>
+            <column name="age" valueNumeric="28"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
-            <column name="name" value="Ника"/>
-            <column name="surname" value="Родионова"/>
-            <column name="age" valueNumeric="32"/>
+            <column name="name" value="Алексей"/>
+            <column name="surname" value="Федоров"/>
+            <column name="age" valueNumeric="35"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
-            <column name="name" value="Савелий"/>
-            <column name="surname" value="Петров"/>
-            <column name="age" valueNumeric="34"/>
+            <column name="name" value="Татьяна"/>
+            <column name="surname" value="Васильева"/>
+            <column name="age" valueNumeric="27"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
-            <column name="name" value="Лев"/>
-            <column name="surname" value="Горбунов"/>
-            <column name="age" valueNumeric="45"/>
+            <column name="name" value="Николай"/>
+            <column name="surname" value="Егоров"/>
+            <column name="age" valueNumeric="50"/>
+            <column name="trip_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Екатерина"/>
+            <column name="surname" value="Смирнова"/>
+            <column name="age" valueNumeric="24"/>
+            <column name="trip_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Светлана"/>
+            <column name="surname" value="Алексеева"/>
+            <column name="age" valueNumeric="33"/>
+            <column name="trip_id" valueNumeric="1"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Виктор"/>
             <column name="surname" value="Поздняков"/>
             <column name="age" valueNumeric="55"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Денис"/>
             <column name="surname" value="Зеленин"/>
             <column name="age" valueNumeric="54"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Алёна"/>
             <column name="surname" value="Серебрякова"/>
             <column name="age" valueNumeric="43"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Елизавета"/>
             <column name="surname" value="Казакова"/>
             <column name="age" valueNumeric="56"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Ирина"/>
             <column name="surname" value="Казакова"/>
             <column name="age" valueNumeric="64"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Александр"/>
             <column name="surname" value="Воробьев"/>
             <column name="age" valueNumeric="31"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Маргарита"/>
             <column name="surname" value="Комарова"/>
             <column name="age" valueNumeric="30"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Маргарита"/>
             <column name="surname" value="Комарова"/>
             <column name="age" valueNumeric="30"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Иван"/>
             <column name="surname" value="Медведев"/>
             <column name="age" valueNumeric="40"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Александр"/>
             <column name="surname" value="Иванов"/>
             <column name="age" valueNumeric="30"/>
+            <column name="boat_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Мария"/>
             <column name="surname" value="Петрова"/>
             <column name="age" valueNumeric="25"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Дмитрий"/>
             <column name="surname" value="Сидоров"/>
             <column name="age" valueNumeric="35"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Елена"/>
             <column name="surname" value="Кузнецова"/>
             <column name="age" valueNumeric="28"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Николай"/>
             <column name="surname" value="Семёнов"/>
             <column name="age" valueNumeric="45"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Ольга"/>
             <column name="surname" value="Федорова"/>
             <column name="age" valueNumeric="32"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Игорь"/>
             <column name="surname" value="Морозов"/>
             <column name="age" valueNumeric="50"/>
+            <column name="trip_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Александр"/>
+            <column name="surname" value="Кузнецов"/>
+            <column name="age" valueNumeric="34"/>
+            <column name="trip_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Елена"/>
+            <column name="surname" value="Павлова"/>
+            <column name="age" valueNumeric="29"/>
+            <column name="trip_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Игорь"/>
+            <column name="surname" value="Семенов"/>
+            <column name="age" valueNumeric="41"/>
+            <column name="trip_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Марина"/>
+            <column name="surname" value="Киселева"/>
+            <column name="age" valueNumeric="37"/>
+            <column name="trip_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Сергей"/>
+            <column name="surname" value="Жуков"/>
+            <column name="age" valueNumeric="50"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Анна"/>
             <column name="surname" value="Павлова"/>
             <column name="age" valueNumeric="29"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Сергей"/>
             <column name="surname" value="Лебедев"/>
             <column name="age" valueNumeric="37"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Татьяна"/>
             <column name="surname" value="Никитина"/>
             <column name="age" valueNumeric="41"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Владимир"/>
             <column name="surname" value="Громов"/>
             <column name="age" valueNumeric="48"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Кристина"/>
             <column name="surname" value="Давыдова"/>
             <column name="age" valueNumeric="26"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Артем"/>
             <column name="surname" value="Соловьев"/>
             <column name="age" valueNumeric="39"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Юлия"/>
             <column name="surname" value="Зайцева"/>
             <column name="age" valueNumeric="24"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Максим"/>
             <column name="surname" value="Ковалев"/>
             <column name="age" valueNumeric="33"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Дарья"/>
             <column name="surname" value="Маркова"/>
             <column name="age" valueNumeric="27"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Егор"/>
             <column name="surname" value="Савельев"/>
             <column name="age" valueNumeric="36"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Светлана"/>
             <column name="surname" value="Климова"/>
             <column name="age" valueNumeric="42"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Анастасия"/>
             <column name="surname" value="Борисова"/>
             <column name="age" valueNumeric="31"/>
+            <column name="trip_idd" valueNumeric="3"/>
         </insert>
-
+        <insert tableName="passengers">
+            <column name="name" value="Владимир"/>
+            <column name="surname" value="Коновалов"/>
+            <column name="age" valueNumeric="45"/>
+            <column name="trip_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Екатерина"/>
+            <column name="surname" value="Мельникова"/>
+            <column name="age" valueNumeric="32"/>
+            <column name="trip_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Алексей"/>
+            <column name="surname" value="Смирнов"/>
+            <column name="age" valueNumeric="38"/>
+            <column name="trip_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ольга"/>
+            <column name="surname" value="Тихонова"/>
+            <column name="age" valueNumeric="26"/>
+            <column name="trip_id" valueNumeric="3"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дмитрий"/>
+            <column name="surname" value="Орехов"/>
+            <column name="age" valueNumeric="38"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Андрей"/>
+            <column name="surname" value="Котов"/>
+            <column name="age" valueNumeric="45"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Семён"/>
+            <column name="surname" value="Волков"/>
+            <column name="age" valueNumeric="31"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ника"/>
+            <column name="surname" value="Родионова"/>
+            <column name="age" valueNumeric="32"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Савелий"/>
+            <column name="surname" value="Петров"/>
+            <column name="age" valueNumeric="34"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Лев"/>
+            <column name="surname" value="Горбунов"/>
+            <column name="age" valueNumeric="45"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Александр"/>
+            <column name="surname" value="Воронов"/>
+            <column name="age" valueNumeric="30"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Мария"/>
+            <column name="surname" value="Крылова"/>
+            <column name="age" valueNumeric="28"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Сергей"/>
+            <column name="surname" value="Зуев"/>
+            <column name="age" valueNumeric="35"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Елена"/>
+            <column name="surname" value="Гусева"/>
+            <column name="age" valueNumeric="33"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Николай"/>
+            <column name="surname" value="Миронов"/>
+            <column name="age" valueNumeric="42"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Ольга"/>
+            <column name="surname" value="Фомина"/>
+            <column name="age" valueNumeric="27"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Дмитрий"/>
+            <column name="surname" value="Орлов"/>
+            <column name="age" valueNumeric="31"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Татьяна"/>
+            <column name="surname" value="Лебедева"/>
+            <column name="age" valueNumeric="29"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Попов"/>
+            <column name="age" valueNumeric="39"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Екатерина"/>
+            <column name="surname" value="Васильева"/>
+            <column name="age" valueNumeric="25"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Виктор"/>
+            <column name="surname" value="Соловьев"/>
+            <column name="age" valueNumeric="37"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Юлия"/>
+            <column name="surname" value="Макарова"/>
+            <column name="age" valueNumeric="22"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Игорь"/>
+            <column name="surname" value="Виноградов"/>
+            <column name="age" valueNumeric="44"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Светлана"/>
+            <column name="surname" value="Голубева"/>
+            <column name="age" valueNumeric="36"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Павел"/>
+            <column name="surname" value="Киселев"/>
+            <column name="age" valueNumeric="40"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Алина"/>
+            <column name="surname" value="Ильина"/>
+            <column name="age" valueNumeric="26"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Михаил"/>
+            <column name="surname" value="Терентьев"/>
+            <column name="age" valueNumeric="38"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Вера"/>
+            <column name="surname" value="Герасимова"/>
+            <column name="age" valueNumeric="34"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
+        <insert tableName="passengers">
+            <column name="name" value="Григорий"/>
+            <column name="surname" value="Афанасьев"/>
+            <column name="age" valueNumeric="29"/>
+            <column name="trip_id" valueNumeric="4"/>
+        </insert>
     </changeSet>
 
     <changeSet id="5" author="Admin">
