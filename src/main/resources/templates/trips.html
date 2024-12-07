@@ -2,26 +2,93 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Trips Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #444;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        table thead {
+            background-color: #0078D7;
+            color: white;
+        }
+
+        table thead th {
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table td {
+            padding: 10px;
+            font-size: 14px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        table ul li {
+            padding: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
-<h1>All Trips</h1>
-<table border="1">
+<h1>Все рейсы на данный момент</h1>
+<table>
     <thead>
     <tr>
         <th>ID</th>
-        <th>Road Map</th>
-        <th>Cost</th>
-        <th>Date of Voyage</th>
-        <th>Quantity</th>
-        <th>Boat Name</th>
-        <th>Passengers</th>
+        <th>Маршрут следования</th>
+        <th>Стоимость поездки</th>
+        <th>Дата поездки</th>
+        <th>Кол-во пассажиров</th>
+        <th>Судно</th>
+        <th>Пассажиры</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="trip : ${trips}">
         <td th:text="${trip.id}"></td>
         <td th:text="${trip.roadMap}"></td>
-        <td th:text="${trip.cost}"></td>
+        <td th:text="${trip.cost} + ' руб.'"></td>
         <td th:text="${trip.dateOfVoyage}"></td>
         <td th:text="${trip.quantity}"></td>
         <td th:text="${trip.boat.boatName}"></td>
@@ -34,5 +101,8 @@
     </tr>
     </tbody>
 </table>
+<footer>
+    &copy; 2024 Водолёт. Все права защищены.
+</footer>
 </body>
 </html>

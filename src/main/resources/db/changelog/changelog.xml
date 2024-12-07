@@ -319,7 +319,7 @@
             <column name="name" value="Александр"/>
             <column name="surname" value="Иванов"/>
             <column name="age" valueNumeric="30"/>
-            <column name="boat_id" valueNumeric="2"/>
+            <column name="trip_id" valueNumeric="2"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Мария"/>
@@ -457,7 +457,7 @@
             <column name="name" value="Анастасия"/>
             <column name="surname" value="Борисова"/>
             <column name="age" valueNumeric="31"/>
-            <column name="trip_idd" valueNumeric="3"/>
+            <column name="trip_id" valueNumeric="3"/>
         </insert>
         <insert tableName="passengers">
             <column name="name" value="Владимир"/>
