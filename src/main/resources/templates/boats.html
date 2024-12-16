@@ -101,21 +101,26 @@
     <tr>
         <th>ID</th>
         <th>Название судна</th>
+        <th>Изображение</th>
         <th>Вместимость</th>
         <th>Рабочий персонал</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="boats : ${boats}">
-        <td th:text="${boats.id}"></td>
-        <td th:text="${boats.boatName}"></td>
-        <td th:text="${boats.capcity}"></td>
+    <tr th:each="boat : ${boats}">
+        <td th:text="${boat.id}"></td>
+        <td th:text="${boat.boatName}"></td>
+        <td>
+            <img th:src="${boat.imageUrl}" alt="Изображение судна" style="width: 100px; height: auto;">
+        </td>
+        <td th:text="${boat.capcity}"></td>
         <td>
             <ul>
-                <li th:each="staff : ${boats.listOfStaff}"
+                <li th:each="staff : ${boat.listOfStaff}"
                     th:text="${'ID ' + staff.id + ' ' + staff.name + ' ' + staff.surname}"></li>
             </ul>
         </td>
+
     </tr>
     </tbody>
 </table>

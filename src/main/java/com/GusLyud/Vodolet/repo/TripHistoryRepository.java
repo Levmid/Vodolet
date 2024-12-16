@@ -13,4 +13,11 @@ import java.util.List;
 public interface TripHistoryRepository extends JpaRepository<TripHistory, Long> {
     @Query("SELECT t FROM TripHistory t WHERE t.dateOfVoyage BETWEEN :startDate AND :endDate")
     List<TripHistory> findTripsByDateRange(LocalDate startDate, LocalDate endDate);
+
+    @Query("SELECT t FROM TripHistory t WHERE t.dateOfVoyage BETWEEN :startDate AND :endDate AND t.roadMap = :roadMap")
+    List<TripHistory> findByDateRangeAndRoadMap(LocalDate startDate, LocalDate endDate, String roadMap);
+
+    @Query("SELECT t FROM TripHistory t WHERE t.roadMap = :roadMap")
+    List<TripHistory> findByRoadMap(String roadMap);
+
 }

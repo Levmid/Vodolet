@@ -19,17 +19,28 @@ public class Boat {
     @Column(name = "capcity")
     private int capcity;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "boat", cascade = CascadeType.ALL)
     private List<Staff> listOfStaff;
 
     public Boat() {
     }
 
-    public Boat(Long id, String boatName, int capcity, List<Staff> listOfStaff) {
-        this.id = id;
+    public Boat(String boatName, int capcity, String imageUrl, List<Staff> listOfStaff) {
         this.boatName = boatName;
         this.capcity = capcity;
+        this.imageUrl = imageUrl;
         this.listOfStaff = listOfStaff;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public Long getId() {

@@ -26,27 +26,55 @@ public class TripController {
 
     @GetMapping("/get-info")
     public String getTripInfo(@RequestParam(required = false) String startDate,
-                              @RequestParam(required = false) String endDate, Model model){
+                              @RequestParam(required = false) String endDate,
+                              @RequestParam(required = false) String roadMap, // Новый параметр для маршрута
+                              Model model) {
         List<Trip> trips;
         if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
-            trips = tripService.getTripsByDateRange(startDate, endDate);
+            if (roadMap != null && !roadMap.isEmpty()) {
+                trips = tripService.getTripsByDateRangeAndRoadMap(startDate, endDate, roadMap);
+            } else {
+                trips = tripService.getTripsByDateRange(startDate, endDate);
+            }
         } else {
-            trips = tripService.getAllTrips();
+            if (roadMap != null && !roadMap.isEmpty()) {
+                trips = tripService.getTripsByRoadMap(roadMap);
+            } else {
+                trips = tripService.getAllTrips();
+            }
         }
+
         model.addAttribute("trips", trips);
+        model.addAttribute("routes", tripService.getAllRoutes()); // Добавляем список маршрутов для выпадающего списка
         return "trips";
     }
 
+
+
     @GetMapping("/get-history-info")
     public String getTripHistoryInfo(@RequestParam(required = false) String startDate,
-                                     @RequestParam(required = false) String endDate, Model model){
+                                     @RequestParam(required = false) String endDate,
+                                     @RequestParam(required = false) String roadMap,
+                                     Model model){
         List<TripHistory> trips;
         if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
-            trips = tripService.getTripsHistoryByDateRange(startDate, endDate);
+            if (roadMap != null && !roadMap.isEmpty()) {
+                trips = tripService.getTripsHistoryByDateRangeAndRoadMap(startDate, endDate, roadMap);
+            } else {
+                trips = tripService.getTripsHistoryByDateRange(startDate, endDate);
+            }
         } else {
-            trips = tripService.getAllHistoryTrips();
+            if (roadMap != null && !roadMap.isEmpty()) {
+                trips = tripService.getTripsHistoryByRoadMap(roadMap);
+            } else {
+                trips = tripService.getAllHistoryTrips();
+            }
         }
+
         model.addAttribute("tripshistory",trips);
+        model.addAttribute("routes", tripService.getAllRoutes());
+        double totalProfit = trips.stream().mapToDouble(TripHistory::getProfit).sum();
+        model.addAttribute("totalProfit", totalProfit);
         return "tripshistory";
     }
 

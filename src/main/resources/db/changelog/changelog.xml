@@ -642,6 +642,9 @@
             <column name="capcity" type="int">
                 <constraints nullable="false"/>
             </column>
+            <column name="image_url" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
         <addAutoIncrement tableName="boat" columnName="id" columnDataType="int"/>
     </changeSet>
@@ -649,18 +652,22 @@
         <insert tableName="boat">
             <column name="boat_name" value="Валдай 45Р"/>
             <column name="capcity" valueNumeric="45"/>
+            <column name="image_url" value="/images/45p1.jpg"/>
         </insert>
         <insert tableName="boat">
             <column name="boat_name" value="Валдай 45Р"/>
             <column name="capcity" valueNumeric="45"/>
+            <column name="image_url" value="/images/45p2.jpg"/>
         </insert>
         <insert tableName="boat">
             <column name="boat_name" value="Метеор 120Р"/>
             <column name="capcity" valueNumeric="120"/>
+            <column name="image_url" value="/images/120p1.jpg"/>
         </insert>
         <insert tableName="boat">
             <column name="boat_name" value="Метеор 120Р"/>
             <column name="capcity" valueNumeric="120"/>
+            <column name="image_url" value="/images/120p2.jpg"/>
         </insert>
     </changeSet>
     <changeSet id="7" author="Admin">

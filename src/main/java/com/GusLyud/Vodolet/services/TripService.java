@@ -31,14 +31,33 @@ public class TripService {
     public List<TripHistory> getAllHistoryTrips(){
         return tripHistory.findAll();
     }
+
     public List<Trip> getTripsByDateRange(String startDate, String endDate) {
-        LocalDate start = LocalDate.parse(startDate);
-        LocalDate end = LocalDate.parse(endDate);
-        return tripRepository.findTripsByDateRange(start, end); // Репозиторий, который фильтрует рейсы по диапазону дат
+        return tripRepository.findByDateRange(LocalDate.parse(startDate), LocalDate.parse(endDate));
     }
+
+    public List<Trip> getTripsByRoadMap(String roadMap) {
+        return tripRepository.findByRoadMap(roadMap);
+    }
+
+    public List<Trip> getTripsByDateRangeAndRoadMap(String startDate, String endDate, String roadMap) {
+        return tripRepository.findByDateRangeAndRoadMap(LocalDate.parse(startDate), LocalDate.parse(endDate), roadMap);
+    }
+
+    public List<TripHistory> getTripsHistoryByDateRangeAndRoadMap(String startDate, String endDate, String roadMap) {
+        return tripHistory.findByDateRangeAndRoadMap(LocalDate.parse(startDate), LocalDate.parse(endDate), roadMap);
+    }
+
+    public List<TripHistory> getTripsHistoryByRoadMap(String roadMap) {
+        return tripHistory.findByRoadMap(roadMap);
+    }
+
     public List<TripHistory> getTripsHistoryByDateRange(String startDate, String endDate) {
-        LocalDate start = LocalDate.parse(startDate);
-        LocalDate end = LocalDate.parse(endDate);
-        return tripHistory.findTripsByDateRange(start, end); // Репозиторий, который фильтрует рейсы по диапазону дат
+        return tripHistory.findTripsByDateRange(LocalDate.parse(startDate), LocalDate.parse(endDate)); // Репозиторий, который фильтрует рейсы по диапазону дат
     }
+
+    public List<String> getAllRoutes() {
+        return tripRepository.findAllDistinctRoadMaps();
+    }
+
 }
